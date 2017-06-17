@@ -6,15 +6,15 @@ is_layout: true
 
 {% block content %}
 
-<div class="container main-content">
+<div class="uk-container">
 
-  <h2 class="page-title">{% editable_text title, inline: true, rows: 1 %}Title goes here{% endeditable_text %}</h2>
-  <div class="body">
+  <article class="uk-article">
+    <h2 class="uk-article-title">{% editable_text title, inline: true, rows: 1 %}Title goes here{% endeditable_text %}</h2>
     {% editable_text body, rows: 15 %}
     <p><a href="#">Maxime</a> incidunt perspiciatis architecto sunt voluptates iusto autem. At repellat quo perferendis aut et necessitatibus reprehenderit. Sint id fuga incidunt corrupti. Voluptatem expedita dolores vel eos. Et nihil saepe minima facilis nihil quis.</p>
     <p>Maxime incidunt perspiciatis architecto sunt voluptates iusto autem. At repellat quo perferendis aut et necessitatibus reprehenderit. Sint id fuga incidunt corrupti. Voluptatem expedita dolores vel eos. Et nihil saepe minima facilis nihil quis.</p>
     {% endeditable_text %}
-  </div>
+  </article>
 
 </div>
 
