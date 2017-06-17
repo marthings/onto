@@ -1,0 +1,104 @@
+---
+title: My account
+published: true
+handle: me
+listed: false
+position: 7
+---
+{% extends 'layouts/default' %}
+
+{% block content %}
+
+{% authorize "accounts", "sign_in" %}
+
+<div class="uk-container">
+
+  {% if current_account %}
+
+    <div id="js-editable-profile"><img src="{{ current_account.avatar.url }}"></div>
+    <div id="js-editable-name" contenteditable="true">{{ current_account.name }}</div>
+    <div id="js-editable-email" onkeyup="validateEmail(this);" contenteditable="true">{{ current_account.email }}</div>
+
+    <div class="uk-grid">
+      {% with_scope account: current_account %}
+        {% for project in contents.projects %}
+        <div class="uk-width-1-3@m">
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+              <a href="{% path_to 'project' %}"><img src="{{ project.featured.url }}"></a>
+            </div>
+            <div class="uk-card-body">
+              <h3><a href="{% path_to 'project' %}">{{ project.name }}</a></h3>
+              <p>{{ project.account.name }}</p>
+              {{ project.account.email }}
+              <img src="{{ project.account.avatar.url | resize: '40x40' }}">
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      {% endwith_scope %}
+    </div>
+
+    <div class="uk-position-fixed uk-position-bottom uk-container">
+      <div class="uk-navbar uk-navbar-container">
+        <div class="uk-flex">
+          <form action="{% path_to 'edit' %}" method="POST" onsubmit="return updateContent()">
+            <input type="hidden" name="slug" value="{{ current_account._slug }}" />
+            <input type="hidden" id="user-name" name="name" value="{{ current_account.name }}" />
+            <input type="hidden" id="user-email" name="email" value="{{ current_account.email }}" />
+            <input type="submit" value="Update" class="uk-button uk-button-primary"/>
+          </form>
+          <form action="{% path_to 'sign_in' %}" method="POST">
+            <input type="hidden" name="auth_action" value="sign_out" />
+            <input type="hidden" name="auth_content_type" value="accounts" />
+            <input type="submit" value="Sign out" class="uk-button uk-button-default"/>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  {% else %}
+
+  <div class="uk-alert uk-alert-warning">
+    You need to <a href="{% path_to 'sign_in' %}">sign in</a>.
+  </div>
+
+  {% endif %}
+
+
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+
+    function validateEmailAdress(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    function updateContent() {
+      // Name
+      var name = document.getElementById("js-editable-name").innerHTML;
+      document.getElementById("user-name").value = name;
+      // Email
+      var mail = document.getElementById("js-editable-email").innerHTML;
+      document.getElementById("user-email").value = mail;
+    }
+
+    function validateEmail() {
+      var mail = document.getElementById("js-editable-email").innerHTML;
+      if (validateEmailAdress(mail)) {
+        console.log('Yay!');
+        // Success style
+        document.getElementById("js-editable-email").className = "correct-email"
+        //empty form will not be submit. You can also alert this message like this.
+      } else {
+         console.log('Ney!');
+         document.getElementById("js-email").className = "wrong-email"
+      }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,33 @@
+# Logfile created on 2017-06-12 22:32:37 +0200 by logger.rb/54362
+I, [2017-06-12T22:32:37.166895 #19962]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-12T22:32:37.166979 #19962]  INFO -- : Maximum connections set to 1024
+I, [2017-06-12T22:32:37.166996 #19962]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-12T22:34:38.494470 #20963]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-12T22:34:38.494669 #20963]  INFO -- : Maximum connections set to 1024
+I, [2017-06-12T22:34:38.494694 #20963]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-13T23:53:12.094652 #20963]  INFO -- : Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+I, [2017-06-13T23:53:15.919238 #23494]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-13T23:53:15.919345 #23494]  INFO -- : Maximum connections set to 1024
+I, [2017-06-13T23:53:15.919363 #23494]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-14T22:24:58.325241 #24564]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-14T22:24:58.325653 #24564]  INFO -- : Maximum connections set to 1024
+I, [2017-06-14T22:24:58.325703 #24564]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-16T21:50:22.536792 #28677]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-16T21:50:22.537306 #28677]  INFO -- : Maximum connections set to 1024
+I, [2017-06-16T21:50:22.537372 #28677]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-16T22:00:56.093845 #28808]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-16T22:00:56.094318 #28808]  INFO -- : Maximum connections set to 1024
+I, [2017-06-16T22:00:56.094373 #28808]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-16T22:08:12.702421 #28928]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-16T22:08:12.702546 #28928]  INFO -- : Maximum connections set to 1024
+I, [2017-06-16T22:08:12.702570 #28928]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-16T22:33:08.283994 #29200]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-16T22:33:08.284104 #29200]  INFO -- : Maximum connections set to 1024
+I, [2017-06-16T22:33:08.284126 #29200]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-16T22:41:41.098512 #29284]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-16T22:41:41.098609 #29284]  INFO -- : Maximum connections set to 1024
+I, [2017-06-16T22:41:41.098629 #29284]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop
+I, [2017-06-16T22:48:20.791548 #29284]  INFO -- : Waiting for 1 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+I, [2017-06-16T22:48:23.351323 #29392]  INFO -- : Thin web server (v1.7.0 codename Dunder Mifflin)
+I, [2017-06-16T22:48:23.351426 #29392]  INFO -- : Maximum connections set to 1024
+I, [2017-06-16T22:48:23.351449 #29392]  INFO -- : Listening on 0.0.0.0:3333, CTRL+C to stop

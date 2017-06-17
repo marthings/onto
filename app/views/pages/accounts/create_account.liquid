@@ -1,0 +1,13 @@
+---
+title: Create account
+published: true
+handle: create
+position: 3
+---
+<h1>{{ page.title }}</h1>
+
+{% action "create account" %}
+  var params = getProp('params');
+  var account = createEntry('accounts', { email: params.email, password: params.auth_password_field });
+  redirectTo('home');
+{% endaction %}

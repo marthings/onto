@@ -1,0 +1,36 @@
+
+  <div class="uk-container">
+
+    <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-logo" href="{% path_to home %}">
+          {% if site.metafields.theme.logo %}
+            <img src="{{ site.metafields.theme.logo }}" />
+          {% endif %}
+          {{ site.name }}
+        </a>
+        <ul class="uk-navbar-nav">
+          {% for page_in_nav in site.pages %}
+            {% if page_in_nav.depth == 1 and page_in_nav.listed? %}
+              <li class="{% if page.fullpath == page_in_nav.fullpath %}uk-active{% endif %}">
+                {% link_to page_in_nav %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          {% if current_account %}
+            <li class="my-account">
+              <a href="{% path_to me %}">My account</a>
+            </li>
+          {% else %}
+            <li class="sign-in">
+              <a href="{% path_to sign_in %}">Sign in</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+  </div>

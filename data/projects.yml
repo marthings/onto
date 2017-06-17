@@ -1,0 +1,15 @@
+- "project1":
+    account: john
+    featured: https://unsplash.it/400/480/?image=392
+
+- "project2":
+    account: martin
+    featured: https://unsplash.it/400/480/?image=390
+
+- "project3":
+    account: john
+    featured: https://unsplash.it/400/480/?image=299
+
+- "project4":
+    account: martin
+    featured: https://unsplash.it/400/480/?image=238
