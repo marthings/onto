@@ -1,8 +1,12 @@
-- "John":
-    email: 'john@locomotivecms.com'
-    password: 'easyone'
-    avatar: http://i.pravatar.cc/48?img=3
-- "Martin":
-    email: 'mb.berggren@gmail.com'
-    password: 'easyone'
-    avatar: http://i.pravatar.cc/48?img=2
+- John:
+    _slug: john
+    name: John
+    surname: Doe
+    email: john@locomotivecms.com
+    avatar: "/samples/content_entries/avatar-1.jpg"
+- Martin:
+    _slug: martin
+    name: Martin
+    surname: Berggren
+    email: mb.berggren@gmail.com
+    avatar: "/samples/content_entries/avatar-2.jpg"

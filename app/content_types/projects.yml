@@ -51,6 +51,10 @@ fields:
     hint: A featured image displayed with your project
     localized: false
 
+- stars:
+    label: Stars
+    type: integer
+
 - account:
     label: Account
     hint: A description of the relationship for the editors

@@ -1,15 +1,24 @@
-- "project1":
+- San francisco:
+    _slug: san-francisco
+    name: San francisco
+    featured: "/samples/content_entries/unsplash.jpg"
+    stars: 1
     account: john
-    featured: https://unsplash.it/400/480/?image=392
-
-- "project2":
+- The diving:
+    _slug: the-diving
+    name: The diving
+    featured: "/samples/content_entries/unsplash-1.jpg"
+    stars: 3
     account: martin
-    featured: https://unsplash.it/400/480/?image=390
-
-- "project3":
+- Young & Earnst:
+    _slug: young-and-earnst
+    name: Young & Earnst
+    featured: "/samples/content_entries/unsplash-2.jpg"
+    stars: 5
     account: john
-    featured: https://unsplash.it/400/480/?image=299
-
-- "project4":
+- Humble:
+    _slug: humble
+    name: Humble
+    featured: "/samples/content_entries/unsplash-3.jpg"
+    stars: 23
     account: martin
-    featured: https://unsplash.it/400/480/?image=238

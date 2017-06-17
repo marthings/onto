@@ -1,0 +1,18 @@
+---
+title: Update account
+slug: edit-account
+handle: edit
+position: 5
+listed: false
+published: true
+is_layout: false
+---
+<h1>{{ page.title }}</h1>
+{% capture account_slug %}{{ params.slug }}{% endcapture %}
+{% action "editAccount" %}
+  setProp("account", "{{account_slug}}");
+  var params = getProp('params');
+  var account = getProp('account');
+  update_account = updateEntry('accounts', account, { name: params.name, email: params.email });
+  redirectTo('me');
+{% endaction %}

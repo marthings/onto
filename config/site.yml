@@ -1,7 +1,7 @@
 # The name of this site
 # This text displays in the back-office and
 # can be used in templates through the site.name global variable
-name: "My site"
+name: "Yard"
 
 # An array of domain aliases for the site
 # This option is for sites on multi-site engines
@@ -43,10 +43,10 @@ meta_description: "some meta description"
 
 metafields:
   social:
-    facebook: "http://locomotive.works"
-    twitter: "http://locomotive.works"
-    pinterest: "http://locomotive.works"
-    google: "http://locomotive.works"
+    facebook: http://locomotive.works
+    twitter: http://locomotive.works
+    pinterest: http://locomotive.works
+    google: http://locomotive.works
   theme:
     main_color: "#1E1D3C"
   smtp:

@@ -2,6 +2,11 @@
 title: Home page
 published: true
 handle: home
+editable_elements:
+  content/introduction: |-
+    <h1 class="heading-primary">Showcase your locomotice site</h1>
+            <p class="uk-text-large">Share & inspire other developers / designers. Create account to start share!</p>
+            <a href="#" class="uk-button uk-button-primary">Create account</a>
 ---
 {% extends 'layouts/default' %}
 
@@ -13,8 +18,9 @@ handle: home
 
     <div class="hero">
       {% editable_text introduction, rows: 5, priority: 1 %}
-        <h1 class="heading-primary">A site with authentication</h1>
-        <p class="uk-text-large">This is using the last authentication LocomotiveCMS feature</p>
+        <h1 class="heading-primary">Showcase your locomotice site</h1>
+        <p class="uk-text-large">Share & inspire other developers / designers. Create account to start share!</p>
+        <a href="#" class="uk-button uk-button-primary">Create account</a>
       {% endeditable_text %}
     </div>
 
@@ -25,11 +31,17 @@ handle: home
           <div class="uk-card-media-top">
             <a href="{% path_to 'project' %}"><img src="{{ project.featured.url }}"></a>
           </div>
+
           <div class="uk-card-body">
             <h3><a href="{% path_to 'project' %}">{{ project.name }}</a></h3>
-            <p>{{ project.account.name }}</p>
-            {{ project.account.email }}
-            <img src="{{ project.account.avatar.url | resize: '40x40' }}">
+            <div class="uk-flex uk-flex-middle">
+              <img class="uk-margin-right" src="{{ project.account.avatar.url | resize: '40x40' }}">
+              <div>
+                <h5>{{ project.account.name }}</h5>
+                {{ project.stars }}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -39,11 +51,17 @@ handle: home
 
   <div class="uk-container">
     {% for account in contents.accounts %}
-      <a href="{% path_to 'account' %}">{{ account.name }}</a>
-      <img src="{{ account.avatar.url }}">
-      {% for project in account.projects %}
-        {{ project.name }}
-      {% endfor %}
+
+      <article class="m-profile">
+        <img class="m-profile-picture" src="{{ account.avatar.url }}">
+        <div class="m-profile-name"><a href="{% path_to 'account' %}">{{ account.name }} {{ account.surname }}</a></div>
+
+        <div class="m-profile-meta">
+          <div class="m-profile-stats">{{ account.projects.size}} projects</div>
+          <div class="m-profile-stars">43 stars</div>
+        </div>
+      </article>
+
     {% endfor %}
   </div>
 
